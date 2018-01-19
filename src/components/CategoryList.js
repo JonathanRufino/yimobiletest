@@ -7,8 +7,12 @@ export default class CategoryList extends Component {
         super(props);
 
         this.state = {
-            categories: this.props.categories
+            categories: []
         };
+    }
+
+    componentWillMount() {
+        this.setState({ categories: this.props.categories });
     }
 
     renderCategory({ item }) {
@@ -19,7 +23,8 @@ export default class CategoryList extends Component {
         return (
             <FlatList
                 style={styles.containerStyle}
-                data={this.state.categories} 
+                data={this.state.categories}
+                keyExtractor={item => item.name}
                 renderItem={this.renderCategory}
                 horizontal
             />
