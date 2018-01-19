@@ -18,7 +18,7 @@ const Rating = (props) => {
 
     return (
         <Text style={[styles.rating, { backgroundColor: getRatingColor() }]}>
-            {props.rating.toFixed(1)}
+            {props.rating.toFixed(1).toString().replace('.', ',')}
         </Text>
     );
 };
