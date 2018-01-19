@@ -35,6 +35,7 @@ export default class CategoryList extends Component {
 const styles = {
     containerStyle: {
         paddingHorizontal: 20,
-        paddingVertical: 10
+        paddingTop: 10,
+        paddingBottom: 15
     }
 };

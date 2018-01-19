@@ -11,33 +11,31 @@ const IMAGES = {
 
 const CategoryItem = (props) => (
     <ImageBackground
-        style={styles.imageStyle}
+        style={styles.categoryImage}
         source={IMAGES[props.name]}
     >
-        <Text style={styles.textStyle}>
+        <Text style={styles.categoryName}>
             {props.name}
         </Text>
     </ImageBackground>
 );
 
 const styles = {
-    imageStyle: {
+    categoryImage: {
         height: 85,
         width: 85,
         justifyContent: 'flex-end',
         alignItems: 'center',
         margin: 4,
     },
-    textStyle: {
+    categoryName: {
         color: '#FFF',
         fontSize: 10,
         marginBottom: 10,
         fontFamily: 'Roboto',
-        shadowColor: '#000',
-        shadowOffset: { width: 0, height: 2 },
-        shadowOpacity: 0.1,
-        shadowRadius: 2,
-        elevation: 1,
+        textShadowColor: '#000',
+        textShadowOffset: { width: 2, height: 2 },
+        textShadowRadius: 5
     }
 };
 
