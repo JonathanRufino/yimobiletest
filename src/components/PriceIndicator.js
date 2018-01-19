@@ -22,17 +22,21 @@ const PriceIndicator = (props) => {
     };
 
     return (
-        <View style={{ flexDirection: 'row' }}>
+        <View style={styles.container}>
             {renderPrice()}
         </View>
     );
 };
 
 const styles = {
+    container: {
+        flexDirection: 'row',
+        padding: 2
+    },
     price: {
         fontSize: 10,
         fontFamily: 'Roboto',
-        padding: 0.25
+        marginRight: 0.5,
     }
 };
 
