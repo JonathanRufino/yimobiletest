@@ -10,6 +10,13 @@ Para executar o aplicativo realize os seguintes passos:
     - Android: ````react-native run-android````
     - iOS: ````react-native run-ios````
 
+**Atenção:** Se ocorrer um dos erros a seguir realize as ações sugeridas.
+
+- **````ENOENT no such file or directory lstat````**
+    - Apenas rode o aplicativo novamente
+- **````Error: While resolving module `react-native-vector-icons/MaterialIcons`, the Haste package `react-native-vector-icons` was found. However the module `MaterialIcons` ````**
+    - Execute ````rm ./node_modules/react-native/local-cli/core/__fixtures__/files/package.json````
+
 ## Aplicativo
 
 O aplicativo é composto por 3 elementos principais:
@@ -19,7 +26,7 @@ O aplicativo é composto por 3 elementos principais:
 
 Esses elementos foram separados em componentes, e subcomponentes, para permitir a modularização do código, bem como a sua devida reutilização.
 
-### Barra de Naveção
+### Barra de Navegação
 
 A barra de navegação possui um ícone para acesso ao menu, o título do aplicativo e outro ícone para acesso as configurações/preferências do app.
 
@@ -51,7 +58,12 @@ Para implementar tal comportamente, o componente ````<PriceIndicator>```` recebe
 
 Com os parâmetros citados é então realizado um loop que cria cada um dos símbolos verificando se deve ser preenchido ou não, caso sim é atribuida então uma cor mais escura ao elemento que representa o índice dentre o total.
 
-#### Considerações
+### Considerações
 
 - Foi necessário renomear a imagem ````café_square.png```` para ````cafe_square.png````, pois o react native não identifica arquivos com acento no nome.
 - Também foi necessário criar a variável ````IMAGES```` como um dicionário para realizar a importação dos arquivos de imagem, visto que o react native não permite a importação dinâmica de arquivos estáticos com os método ````require(path)```` e ````<Image source={{ uri: path }}````.
+- O ícone de **"Configurações"** apresentado no sketch não foi encontrado na biblioteca sugerida (possivelmente o ícone foi atualizado ou removido), desta forma foi utilizado outro ícone semelhante.
+
+### Resultado
+
+<img src="https://github.com/JonathanRufino/yimobiletest/blob/master/Android.png?raw=true" width="350">
