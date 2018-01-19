@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { FlatList, View } from 'react-native';
 import RestaurantItem from './RestaurantItem';
 
-export default class RestaurantsList extends Component {
+export default class RestaurantList extends Component {
     constructor(props) {
         super(props);
 

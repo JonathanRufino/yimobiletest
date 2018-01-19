@@ -3,7 +3,7 @@ import { View } from 'react-native';
 import Toolbar from './src/components/Toolbar';
 import CategoryList from './src/components/CategoryList';
 import Restaurants from './src/assets/restaurants.json';
-import RestaurantsList from './src/components/RestaurantsList';
+import RestaurantList from './src/components/RestaurantList';
 
 export default class App extends Component {
     render() {
@@ -11,7 +11,7 @@ export default class App extends Component {
             <View style={{ flex: 1 }}>
                 <Toolbar title={'Restaurantes'} />
                 <CategoryList categories={Restaurants.categories} />
-                <RestaurantsList restaurants={Restaurants.list} />
+                <RestaurantList restaurants={Restaurants.list} />
             </View>
         );
     }

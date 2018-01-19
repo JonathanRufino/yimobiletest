@@ -27,7 +27,7 @@ const RestaurantItem = (props) => {
  
     return (
         <View style={styles.mainContainer}>
-            <View style={styles.infoContainr}>
+            <View style={styles.infoContainer}>
                 <Image
                     style={styles.restaurantImage}
                     source={IMAGES[restaurant.name.split(' ')[0]]}
