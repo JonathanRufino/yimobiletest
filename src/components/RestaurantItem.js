@@ -33,7 +33,7 @@ const RestaurantItem = (props) => {
                     source={IMAGES[restaurant.name.split(' ')[0]]}
                 />
                 <View style={{ flexGrow: 1, marginHorizontal: 10 }}>
-                    <Text style={styles.restaurantName}>
+                    <Text style={styles.restaurantName} adjustFontSizeToFit>
                         {restaurant.name}
                     </Text>
                     <View style={styles.detailsContainer}>
@@ -69,10 +69,10 @@ const RestaurantItem = (props) => {
 const styles = {
     mainContainer: {
         flexDirection: 'column',
-        margin: 10
+        margin: 10,
     },
     infoContainer: {
-        justifyContent: 'space-between',
+        justifyContent: 'space-around',
         alignItems: 'flex-start',
         flexDirection: 'row',
     },
@@ -82,7 +82,7 @@ const styles = {
     },
     restaurantName: {
         color: '#D06600',
-        fontSize: 19,
+        fontSize: 18,
         fontFamily: 'Roboto'
     },
     infoStyle: {
