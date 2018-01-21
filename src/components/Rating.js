@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text } from 'react-native';
+import { View, Text } from 'react-native';
 
 const Rating = (props) => {
     const getRatingColor = () => {
@@ -17,23 +17,27 @@ const Rating = (props) => {
     };
 
     return (
-        <Text style={[styles.rating, { backgroundColor: getRatingColor() }]}>
-            {props.rating.toFixed(1).toString().replace('.', ',')}
-        </Text>
+        <View style={[styles.container, { backgroundColor: getRatingColor() }]}>
+            <Text style={styles.rating}>
+                {props.rating.toFixed(1).toString().replace('.', ',')}
+            </Text>
+        </View>
     );
 };
 
 const styles = {
-    rating: {
-        color: '#FFF',
+    container: {
         borderRadius: 10,
         padding: 5,
         width: 30,
         alignItems: 'center',
         justifyContent: 'center',
+    },
+    rating: {
         fontSize: 14,
-        fontFamily: 'Roboto'
-    }
+        fontFamily: 'Roboto',
+        color: '#FFF',
+    },
 };
 
 export default Rating;
