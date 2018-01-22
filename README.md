@@ -66,4 +66,4 @@ Com os parâmetros citados é então realizado um loop que cria cada um dos sím
 
 ### Resultado
 
-<img src="https://github.com/JonathanRufino/yimobiletest/blob/master/Android.png?raw=true" width="350">
+<img src="https://github.com/JonathanRufino/yimobiletest/blob/master/Android.png?raw=true" width="350"> <img src="https://github.com/JonathanRufino/yimobiletest/blob/master/iOS.png?raw=true" width="350">
